@@ -19,7 +19,7 @@
           <div class="item" [ngClass]="{'active-carousel' : i == activeIndex}">
             <div class="item text-center">
 
-            <img style="margin:auto;" [src]="carousel.icon" [attr.alt]="'Carousel image for slide ' + i">
+            <img [src]="carousel.icon" [attr.alt]="'Carousel image for slide ' + i">
               <p class="carousel-slider-desc" style="" aria-live="polite">{{carousel.description}}</p>
 
           </div>

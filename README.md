@@ -14,15 +14,12 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
+## General Description
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1) No external plugin has been used to create the carusel
+2) Scince the component made is only one no seperate module has been created.
+3) The carousel images and data has been populated from a static JSON file assuming it can be a dynamic Web API. Which will be easy to change without touching front-end code.
+4) Responsive ui, Accessbility area tags are binded dynamically.
+5) Have used bootstrap, font-awsome icons for header (can be replaced with custom icons realtime) and scss for styling purpose. Web Font has been applied on link (<a> tag) just for sample use.
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
