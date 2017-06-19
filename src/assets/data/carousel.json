@@ -9,11 +9,11 @@
   },
   {
     "icon":"../assets/images/home3.jpg",
-    "carousel-description":"Slide 3"
+    "description":"Slide 3"
   },
   {
     "icon":"../assets/images/home4.jpg",
-    "carousel-description":"Slide 4"
+    "description":"Slide 4"
   },
   {
     "icon":"../assets/images/home5.jpg",

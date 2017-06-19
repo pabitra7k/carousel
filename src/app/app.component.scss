@@ -135,6 +135,15 @@ $color-carousel-blue: #375482;
     margin: 5px;
   }
 
+  .brand-name {
+    float: left;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px;
+    color: $color-carousel-blue;
+  }
+
   ul {
     float: right;
   }
@@ -150,14 +159,7 @@ $color-carousel-blue: #375482;
   }
 }
 
-.brand-name {
-  float: left;
-  display: inline-block;
-  font-size: 20px;
-  font-weight: bold;
-  margin: 5px;
-  color: $color-carousel-blue;
-}
+
 
 
 
