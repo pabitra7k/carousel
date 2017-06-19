@@ -1,0 +1,22 @@
+[
+  {
+    "icon":"../assets/images/home1.jpg",
+    "description":"Slide 1"
+  },
+  {
+    "icon":"../assets/images/home2.jpg",
+    "description":"Slide 2"
+  },
+  {
+    "icon":"../assets/images/home3.jpg",
+    "carousel-description":"Slide 3"
+  },
+  {
+    "icon":"../assets/images/home4.jpg",
+    "carousel-description":"Slide 4"
+  },
+  {
+    "icon":"../assets/images/home5.jpg",
+    "description":"Slide 5"
+  }
+  ]

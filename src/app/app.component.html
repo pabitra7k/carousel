@@ -1,5 +1,79 @@
+<nav class="nav-bar">
+  <h1 class="brand-name">Brand Name</h1>
+  <ul class="list-inline menubar">
+    <li class="profile"><a><i class="fa fa-user"  aria-hidden="true"></i></a></li>
+    <li class="menu"><a><i class="fa fa-bars"  aria-hidden="true"></i></a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <section class="col-md-6 col-xs-12">
+      <div class="carousel-container">
+        <ul class="carousel-indicator">
+          <li  *ngFor="let carousel of carouselsData; let i = index;" class="" (click)="selectCarousel(i, $event)" [ngClass]="{'active-carousel-indicator' : i == 0}">
+          </li>
+        </ul>
+        <div *ngFor="let carousel of carouselsData; let i = index;" class="carousel-slider">
+
+          <div class="item" [ngClass]="{'active-carousel' : i == activeIndex}">
+            <div class="item text-center">
+
+            <img style="margin:auto;" src="../assets/images/home1.jpg" [src]="carousel.icon">
+              <p class="carousel-slider-desc" style="">{{carousel.description}}</p>
+
+          </div>
+          </div>
+         <!-- <div class="item">
+            <div class="item text-center">
+
+            <img style="margin:auto;" src="http://www.angulartypescript.com/wp-content/uploads/2016/03/car2.jpg">
+
+            <div class="carousel-caption">
+              <h3 style="background-color: transparent;color: white;">Slide 2</h3>
+              <p style="background-color: transparent;color: white;">BMW 2</p>
+            </div>
+
+          </div>
+          </div>
+          <div class="item">
+          <div class="item text-center">
+
+            <img style="margin:auto;" src="http://www.angulartypescript.com/wp-content/uploads/2016/03/car3.jpg">
+
+            <div class="carousel-caption">
+              <h3 style="background-color: transparent;color: white;">Slide 3</h3>
+              <p style="background-color: transparent;color: white;">BMW 3</p>
+            </div>
+
+          </div>
+        </div>-->
+
+        </div>
+        <a class="carousel-control left" (click)="selectCarousel(i, $event, 'left')">
+          <span class="left-control"></span>
+        </a>
+        <a class="carousel-control right" (click)="selectCarousel(i, $event, 'right')">
+          <span class="right-control"></span>
+        </a>
+      </div>
+    </section>
+    <section class="carousel-description col-md-6 col-sm-12">
+      <h3>236 bestemminqen</h3>
+        <p>Zoek op budget, periode, regio en de locatie van uw Facebook vrienden wereldwijd. Een groot network betekent veel heriinneringen. Ean groot netwerk betekent veel herinneringen.</p>
+        <a>Begin met zoeken</a>
+      </section>
+  </div>
+
+
+ <!-- <div class="col-md-12">
+    <button class="btn btn-info" type="button">Remove Last Slide
+    </button>
+  </div>-->
+</div>
+
 <!--The whole content below can be removed with the new code.-->
-<div style="text-align:center">
+<!--<div style="text-align:center">
   <h1>
     Welcome to {{title}}!!
   </h1>
@@ -16,5 +90,6 @@
   <li>
     <h2><a target="_blank" href="http://angularjs.blogspot.ca/">Angular blog</a></h2>
   </li>
-</ul>
+</ul>-->
+
 

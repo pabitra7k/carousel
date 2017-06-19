@@ -1,0 +1,168 @@
+/*************** IMPORT STYLES ***************/
+//Font Awesome Icons
+@import '../../node_modules/font-awesome/css/font-awesome.min.css';
+
+//Var declaration - Just for sample use, in case of many we should maintain a separate file
+$color-carousel-blue: #375482;
+
+.carousel-container {
+  position: relative;
+
+  .carousel-indicator {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    padding-left: 0;
+    margin-left: -30%;
+    text-align: center;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 2px;
+      background-color: rgba(0,0,0,0);
+      border: 1px solid black;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .active-carousel-indicator {
+      background-color: $color-carousel-blue;
+    }
+  }
+
+  .carousel-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    .carousel-slider-desc {
+      position: absolute;
+      right: 15%;
+      bottom: 0px;
+      left: 15%;
+      padding-top: 20px;
+      color: #fff;
+      text-align: center;
+      background-color: transparent;
+    }
+  }
+
+  .carousel-slider>.item {
+    position: relative;
+    display: none;
+  }
+  .carousel-slider>.item.active-carousel{
+    display: block;
+  }
+
+  .carousel-control {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 15%;
+    text-align: left;
+    padding-left : 15px;
+
+    span {
+      position: absolute;
+      top: 50%;
+      height: 35px;
+      width: 24px;
+      display: inline-block;
+      margin-top: -10px;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      pointer-events: visible;
+      background-size: contain;
+    }
+
+    .left-control {
+      background-image: url(../assets/images/left-control.png);
+    }
+
+    .right-control {
+      background-image: url(../assets/images/right-control.png);
+    }
+
+  }
+  .carousel-control.left {
+    left: 0;
+  }
+  .carousel-control.right {
+    right: 0;
+  }
+
+  .item {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.carousel-description {
+  h2, a {
+    color: $color-carousel-blue;
+  }
+}
+
+.nav-bar{
+  display: none;
+}
+
+.container{
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .container{
+    padding-top: 10px;
+  }
+  .carousel-description {
+    margin-top: 40px;
+  }
+  .nav-bar{
+    display: block;
+    overflow: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 5px;
+  }
+
+  ul {
+    float: right;
+  }
+  li {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    i {
+      font-size: 20px;
+      padding: 3px;
+      border: 1px solid $color-carousel-blue;
+    }
+  }
+}
+
+.brand-name {
+  float: left;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 5px;
+  color: $color-carousel-blue;
+}
+
+
+
+
+
+
+
+
