@@ -19,7 +19,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 1) No external plugin has been used to create the carusel
 2) Since the component made is only one no seperate module has been created.
 3) The carousel images and data has been populated from a static JSON file assuming it can be a dynamic Web API. Which will be easy to change without touching front-end code.
-4) Responsive ui, Accessbility area tags are binded dynamically.
+4) Responsive ui, Accessbility aria tags are binded dynamically.
 5) Have used bootstrap, font-awsome icons for header (can be replaced with custom icons realtime) and scss for styling purpose. Web Font has been applied on link (<a> tag) just for sample use.
+6) A mobile view has been created with header.
 
 
