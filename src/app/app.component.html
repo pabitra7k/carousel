@@ -1,8 +1,8 @@
 <nav class="nav-bar">
   <h1 class="brand-name">Brand Name</h1>
   <ul class="list-inline menubar">
-    <li class="profile"><a><i class="fa fa-user" aria-label="User Profile" tabindex="0"></i></a></li>
-    <li class="menu"><a><i class="fa fa-bars" aria-label="Menu" tabindex="0"></i></a></li>
+    <li class="profile"><a href="" aria-label="User Profile"><i class="fa fa-user"></i></a></li>
+    <li class="menu"><a href="" aria-label="Menu"><i class="fa fa-bars"></i></a></li>
   </ul>
 </nav>
 
@@ -11,7 +11,7 @@
     <div class="col-md-6 col-xs-12">
       <div class="carousel-container">
         <ul class="carousel-indicator">
-          <li  *ngFor="let carousel of carouselsData; let i = index;" class="" (click)="selectCarousel(i, $event)" [ngClass]="{'active-carousel-indicator' : i == 0}" tabindex="0" aria-label="click for slide">
+          <li  *ngFor="let carousel of carouselsData; let i = index;" class="" (click)="selectCarousel(i, $event)" [ngClass]="{'active-carousel-indicator' : i == 0}" tabindex="0" [attr.aria-label]="'click for slide - ' + carousel.description">
           </li>
         </ul>
         <div *ngFor="let carousel of carouselsData; let i = index;" class="carousel-slider">
@@ -19,7 +19,7 @@
           <div class="item" [ngClass]="{'active-carousel' : i == activeIndex}">
             <div class="item text-center">
 
-            <img style="margin:auto;" src="../assets/images/home1.jpg" [src]="carousel.icon" alt="">
+            <img style="margin:auto;" [src]="carousel.icon" [attr.alt]="'Carousel image for slide ' + i">
               <p class="carousel-slider-desc" style="" aria-live="polite">{{carousel.description}}</p>
 
           </div>

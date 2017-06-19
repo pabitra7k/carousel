@@ -12,7 +12,12 @@ export class AppComponent implements OnInit{
   carouselsData: any;
   activeIndex: number;
 
-  constructor ( public carousalService: CarouselServiceService) {};
+  constructor ( public carousalService: CarouselServiceService) {
+    setInterval(() => {
+      //this.selectCarousel(undefined, undefined, 'right');
+      alert('hi...');
+    }, 1000 * 60 * 10);
+  };
 
   selectCarousel(index, event, arrow) {
 
@@ -49,6 +54,11 @@ export class AppComponent implements OnInit{
     successRes => {
       this.carouselsData = successRes;
       this.activeIndex = 0;
+      
+      //Start slide show animation
+      setInterval(() => {
+        this.selectCarousel(undefined, undefined, 'right');
+      }, 1000 * 3);
       console.log('Carousel data successfully fetched!!'+ + this.carouselsData[0]);
     },
       errorRes => {
