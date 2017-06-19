@@ -1,17 +1,17 @@
 <nav class="nav-bar">
   <h1 class="brand-name">Brand Name</h1>
   <ul class="list-inline menubar">
-    <li class="profile"><a><i class="fa fa-user"  aria-hidden="true"></i></a></li>
-    <li class="menu"><a><i class="fa fa-bars"  aria-hidden="true"></i></a></li>
+    <li class="profile"><a><i class="fa fa-user" aria-label="User Profile" tabindex="0"></i></a></li>
+    <li class="menu"><a><i class="fa fa-bars" aria-label="Menu" tabindex="0"></i></a></li>
   </ul>
 </nav>
 
 <div class="container">
   <div class="row">
-    <section class="col-md-6 col-xs-12">
+    <div class="col-md-6 col-xs-12">
       <div class="carousel-container">
         <ul class="carousel-indicator">
-          <li  *ngFor="let carousel of carouselsData; let i = index;" class="" (click)="selectCarousel(i, $event)" [ngClass]="{'active-carousel-indicator' : i == 0}">
+          <li  *ngFor="let carousel of carouselsData; let i = index;" class="" (click)="selectCarousel(i, $event)" [ngClass]="{'active-carousel-indicator' : i == 0}" tabindex="0" aria-label="click for slide">
           </li>
         </ul>
         <div *ngFor="let carousel of carouselsData; let i = index;" class="carousel-slider">
@@ -19,8 +19,8 @@
           <div class="item" [ngClass]="{'active-carousel' : i == activeIndex}">
             <div class="item text-center">
 
-            <img style="margin:auto;" src="../assets/images/home1.jpg" [src]="carousel.icon">
-              <p class="carousel-slider-desc" style="">{{carousel.description}}</p>
+            <img style="margin:auto;" src="../assets/images/home1.jpg" [src]="carousel.icon" alt="">
+              <p class="carousel-slider-desc" style="" aria-live="polite">{{carousel.description}}</p>
 
           </div>
           </div>
@@ -50,18 +50,18 @@
         </div>-->
 
         </div>
-        <a class="carousel-control left" (click)="selectCarousel(i, $event, 'left')">
-          <span class="left-control"></span>
+        <a class="carousel-control left" (click)="selectCarousel(i, $event, 'left')" aria-label="left control">
+          <span class="left-control" tabindex="0"></span>
         </a>
-        <a class="carousel-control right" (click)="selectCarousel(i, $event, 'right')">
-          <span class="right-control"></span>
+        <a class="carousel-control right"  (click)="selectCarousel(i, $event, 'right')" aria-label="right control">
+          <span class="right-control" tabindex="0" ></span>
         </a>
       </div>
-    </section>
+    </div>
     <section class="carousel-description col-md-6 col-sm-12">
-      <h3>236 bestemminqen</h3>
+      <h2>236 bestemminqen</h2>
         <p>Zoek op budget, periode, regio en de locatie van uw Facebook vrienden wereldwijd. Een groot network betekent veel heriinneringen. Ean groot netwerk betekent veel herinneringen.</p>
-        <a>Begin met zoeken</a>
+        <a href="">Begin met zoeken</a>
       </section>
   </div>
 

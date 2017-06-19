@@ -24,12 +24,21 @@ export class AppComponent implements OnInit{
     else {
       if (arrow == 'left'){
         document.getElementsByClassName('carousel-indicator')[0].children[this.activeIndex].className= '';
-        this.activeIndex--
+        if (this.activeIndex == 0 ) {
+          this.activeIndex =  this.carouselsData.length - 1;
+        } else {
+          this.activeIndex--
+        }
         document.getElementsByClassName('carousel-indicator')[0].children[this.activeIndex].className= 'active-carousel-indicator';
       }
       else {
         document.getElementsByClassName('carousel-indicator')[0].children[this.activeIndex].className= '';
-        this.activeIndex++;
+        if (this.activeIndex == (this.carouselsData.length - 1) ) {
+          this.activeIndex = 0;
+        } else {
+          this.activeIndex++;
+        }
+
         document.getElementsByClassName('carousel-indicator')[0].children[this.activeIndex].className= 'active-carousel-indicator';
       }
     }
