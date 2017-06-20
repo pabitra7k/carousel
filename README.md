@@ -22,5 +22,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 4) Responsive ui, Accessbility aria tags are binded dynamically.
 5) Have used bootstrap, font-awsome icons for header (can be replaced with custom icons realtime) and scss for styling purpose. Web Font has been applied on link (<a> tag) just for sample use.
 6) A mobile view has been created with header.
+7) Run sample server at http://localhost:3000/ (file loc:https: //github.com/pabitra7k/hello_fly_server/blob/master/server.js) and replace with original api to get carousel data. 
 
 
