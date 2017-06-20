@@ -16,11 +16,10 @@ export class CarouselServiceService {
       .map(res => this.carousels = res.json());
   }
 
- /* public getCarousels(): Observable<any> {
-    return this.http.post("./file.json")
-      .map((res:any) => res.json())
-      .catch((error:any) => console.log(error));
-
+  //To run the actual api pls go to my-app-server of the repo and run the sever
+  /*getCarousels() {
+    return this.http.get('http://localhost:3000/newapp/carousel')
+      .map((res: Response) => res.json());
   }*/
 
 

@@ -1,65 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import {CarouselServiceService} from './carousel-service.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: [CarouselServiceService]
 })
-export class AppComponent implements OnInit{
-  title = 'app';
-  carouselsData: any;
-  activeIndex: number;
 
-  constructor ( public carousalService: CarouselServiceService) {
-  };
+export class AppComponent {
+  title = 'Brand';
 
-  selectCarousel(index, event, arrow) {
+  constructor() { }
 
-    if ((index || index == 0) && arrow == undefined ) {
-      document.getElementsByClassName('active-carousel-indicator')[0].className= '';
-      event.target.className = 'active-carousel-indicator';
-      this.activeIndex = index;
-    }
-    else {
-      if (arrow == 'left'){
-        document.getElementsByClassName('carousel-indicator')[0].children[this.activeIndex].className= '';
-        if (this.activeIndex == 0 ) {
-          this.activeIndex =  this.carouselsData.length - 1;
-        } else {
-          this.activeIndex--
-        }
-        document.getElementsByClassName('carousel-indicator')[0].children[this.activeIndex].className= 'active-carousel-indicator';
-      }
-      else {
-        document.getElementsByClassName('carousel-indicator')[0].children[this.activeIndex].className= '';
-        if (this.activeIndex == (this.carouselsData.length - 1) ) {
-          this.activeIndex = 0;
-        } else {
-          this.activeIndex++;
-        }
-
-        document.getElementsByClassName('carousel-indicator')[0].children[this.activeIndex].className= 'active-carousel-indicator';
-      }
-    }
-  }
-
-  ngOnInit() {
-    this.carousalService.getCarousels().subscribe(
-    successRes => {
-      this.carouselsData = successRes;
-      this.activeIndex = 0;
-
-      //Start slide show animation
-      setInterval(() => {
-        this.selectCarousel(undefined, undefined, 'right');
-      }, 1000 * 4);
-      console.log('Carousel data successfully fetched!!'+ + this.carouselsData[0]);
-    },
-      errorRes => {
-        console.log('Please try after some time!!' + errorRes);
-      }
-    );
-  }
 }

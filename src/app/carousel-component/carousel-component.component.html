@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-xs-12">
+      <div class="carousel-container">
+        <ul class="carousel-indicator">
+          <li  *ngFor="let carousel of carouselsData; let i = index;" class="" (click)="selectCarousel(i, $event)" [ngClass]="{'active-carousel-indicator' : i == 0}" tabindex="0" [attr.aria-label]="'click for slide - ' + carousel.description">
+          </li>
+        </ul>
+        <div *ngFor="let carousel of carouselsData; let i = index;" class="carousel-slider">
+
+          <div class="item" [ngClass]="{'active-carousel' : i == activeIndex}">
+            <div class="item text-center">
+
+              <img [src]="carousel.icon" [attr.alt]="'Carousel image for slide ' + i">
+              <p class="carousel-slider-desc" style="" aria-live="polite">{{carousel.description}}</p>
+
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control left" (click)="selectCarousel(i, $event, 'left')" aria-label="left control">
+          <span class="left-control" tabindex="0"></span>
+        </a>
+        <a class="carousel-control right"  (click)="selectCarousel(i, $event, 'right')" aria-label="right control">
+          <span class="right-control" tabindex="0" ></span>
+        </a>
+        <div class="top-arrow"></div>
+      </div>
+    </div>
+    <section class="carousel-description col-md-6 col-sm-12">
+      <h2>236 bestemminqen</h2>
+      <p>Zoek op budget, periode, regio en de locatie van uw Facebook vrienden wereldwijd. Een groot network betekent veel heriinneringen. Ean groot netwerk betekent veel herinneringen.</p>
+      <a href="">Begin met zoeken</a>
+    </section>
+  </div>
+</div>
+<!--<p>
+  carousel-component works!
+</p>-->

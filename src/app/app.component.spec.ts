@@ -3,6 +3,35 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
+  //Testing router config
+  /*describe('Router: App', () => {
+
+   let location: Location;
+   let router: Router;
+   let fixture;
+
+   beforeEach(() => {
+   TestBed.configureTestingModule({
+   imports: [RouterTestingModule.withRoutes(appRoutes)],
+   declarations: [
+   AppComponent
+   ]
+   });
+
+   router = TestBed.get(Router);
+   location = TestBed.get(Location);
+
+   fixture = TestBed.createComponent(AppComponent);
+   router.initialNavigation();
+   });
+   });
+
+   it('navigate to carousel takes you to /carousel', fakeAsync(() => {
+   router.navigate(['carousel']);
+   tick();
+   expect(location.path()).toBe('/carousel');
+   }));*/
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
@@ -17,16 +46,9 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   }));
 
-/*  it(`should have as title 'app'`, async(() => {
+  it(`should have as title 'Brand'`, async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('app');
-  }));*/
-
-  it('should render section title in a h2 tag', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h2').textContent).toContain('236 bestemminqen');
+    expect(app.title).toEqual('Brand');
   }));
 });
